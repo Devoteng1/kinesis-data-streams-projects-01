@@ -54,7 +54,7 @@ We are going to simulate data coming from a BANK ATM whose data has to be stream
 
 We can use the command below to send a record to the stream.
 
- .aws kinesis  **put-record**\                                     put-record used to put a single record into the stream
+ - aws kinesis  **put-record**\                                     put-record used to put a single record into the stream
 
 .--stream-name  **DemoStream**\                                   We are passing in the name of our created stream. In this case **DemoStream**
 
