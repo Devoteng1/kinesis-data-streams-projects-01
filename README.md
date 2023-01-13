@@ -21,21 +21,28 @@ Amazon Kinesis Data Streams Capacity Modes
 # Stage 1 - Create Amazon Kinesis Application
 
 Head to the Amazon Kinesis Services dashboard to create a Kinesis Data Stream . 
-We have three options : Kinesis Data Stream, Kinesis Data Fireshose and Kinesis Data Analytics
-Select Kinesis Data Stream and clich on Create data stream
+We have three options : **Kinesis Data Stream** , **Kinesis Data Fireshose** and **Kinesis Data Analytics**
+Select **Kinesis Data Stream** 
+click on **Create data stream**
 
-Enter a name for your stream. In this tutirial, we will call our stream "DemoStream"
+Enter a name for your Kinesis Stream. In this tutirial, we will call our stream **"DemoStream"**
 
-For the capacity mode : Select Provisioned mode and number od shards value set to 1 which can be increased or describe later
+For the capacity mode : Select **Provisioned mode** 
+Set the number of shards value **1** which can be increased or describe later
 
-Click on create stream to get our stream created. You can wait for just some few seconds to get the stream created
+Click on **Create Stream** to create the stream. You can wait for just some few seconds to get the stream created
 
-Afterwards our stream should be in the "Active" state.
+Afterwards our stream should be in the **"Active" state**.
 
 # Stage 2 - Create a producer to put records into the Kinesis Data Stream
 In this tuotorial we are going to use the AWS CLI to communicate with the Amazon Kinesis Service
 
 This tutorials assume you have already installed and configured AWS CLI.
-You can follow this Documentation [https://docs.aws.amazon.com/cli/v1/userguide/install-windows.html] to install and configure the AWS CLI for your OS. We are using windows 10 for this tutorial.
+You can follow this Documentation [https://docs.aws.amazon.com/cli/v1/userguide/install-windows.html] to install and configure the AWS CLI for your OS. We are using windows 10 for this tutorial. 
+
+To confirm AWS CLI has been installed and configure on your computer, you can check the installed version by typing "**aws -version**" which should print the version 
+of AWS CLI installed.
+
+We can view a list of avaialable commands by typing **aws kinesis help**
 
 
