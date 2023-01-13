@@ -33,5 +33,9 @@ Click on create stream to get our stream created. You can wait for just some few
 Afterwards our stream should be in the "Active" state.
 
 # Stage 2 - Create a producer to put records into the Kinesis Data Stream
+In this tuotorial we are going to use the AWS CLI to communicate with the Amazon Kinesis Service
+
+This tutorials assume you have already installed and configured AWS CLI.
+You can follow this Documentation [https://docs.aws.amazon.com/cli/v1/userguide/install-windows.html] to install and configure the AWS CLI for your OS. We are using windows 10 for this tutorial.
 
 
