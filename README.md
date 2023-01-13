@@ -45,4 +45,8 @@ of AWS CLI installed.
 
 We can view a list of avaialable commands by typing **aws kinesis help**
 
+Let's check the list of created Kinesis Data Streams in our account by typing  **aws kinesis list-streams**
+
+
+
 
