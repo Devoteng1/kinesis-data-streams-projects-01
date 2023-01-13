@@ -50,7 +50,8 @@ Let's check the list of created Kinesis Data Streams in our account by typing  *
 Now lets put some records into the stream. 
 We can use the **PutRecord** to put one record into the stream or **PutRecords** to put many records into the stream
 
-We are going to simulate data coming from a BANK ATM whose data has to be streammed into Kinesis Data Streams for further processing. We can use the command below to send a record to the stream.
+We are going to simulate data coming from a BANK ATM whose data has to be streammed into Kinesis Data Streams for further processing. 
+We can use the command below to send a record to the stream.
 aws kinesis  **put-record**\                                     put-record used to put a single record into the stream
 --stream-name  **DemoStream**\                                   We are passing in the name of our created stream. In this case **DemoStreams**
 --partition-key  **1**\                                          We are defining a partition key for this put operation
