@@ -64,6 +64,16 @@ We can use the command below to send a record to the stream.
  - --cli-binary-format  **raw-in-base64-out**\                      A flag that specifies how the binary input paramaters should be interpreted. In this case **raw-in-                                                                     base64-out**
 
  - --data **"{'trans_id': 1, 'trans_type': 'ATM', 'amt': 200}"**    The data blob to be put into the stream. In this case **"{'trans_id': 1, 'trans_type': 'ATM' ,                                                                         'amt':200}"** <pre />
+ 
+
+
+In this example we are using the PutRecord API to put 4 records into the stream one by one. Its also possible to use the PutRecords API to write many records at once   to the stream 
+ Record 1. aws kinesis put-record --stream-name DemoStream --partition-key 1 --cli-binary-format raw-in-base64-out --data "{"trans_id": 1, "trans_type": "ATM", "amt":   200}"
+ Record 2. aws kinesis put-record --stream-name DemoStream --partition-key 1 --cli-binary-format raw-in-base64-out --data "{"trans_id": 2, "trans_type": "ATM", "amt":   400}"
+ Record 3. aws kinesis put-record --stream-name DemoStream --partition-key 1 --cli-binary-format raw-in-base64-out --data "{"trans_id": 3, "trans_type": "ATM", "amt":   600}"
+ Record 4. aws kinesis put-record --stream-name DemoStream --partition-key 1 --cli-binary-format raw-in-base64-out --data "{"trans_id": 4, "trans_type": "ATM", "amt":   900}"
+ 
+ 
 
 
 
