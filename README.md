@@ -82,10 +82,10 @@ Next we want to read records from the stream
 
 First lets get the shards iterator which specifies the shard position from which to start reading data records sequentially. The position is specified using the sequence number of a data record in a shard 
 
-aws kinesis **get-shard-iterator**\       <br />     to get an Amazon Kinesis shard iterator.It expires 5 minutes after it is retuerned to the requester
---stream-name **DemoStream** \            <br />     We are passing in the name of our created stream. In this case **DemoStream**
---shard-id **shardId-000000000000** \     <br />     We are passing in our **shardId** of the shard in our stream
---shard-iterator-type **TRIM_HORIZON** \  <br />     We are passing in the shard iterater type whicn can be **AT_TIMESTAMP**, **TRIM_HORIZON** or **LASTEST**. In this                                                      project we have used **TRIM_HORIZON** to cause the shardIterator to point to the last untrimmed record in the                                                          shard(Oldest data record in the shard)
+aws kinesis **get-shard-iterator**\         <br />     to get an Amazon Kinesis shard iterator.It expires 5 minutes after it is retuerned to the requester
+- --stream-name **DemoStream** \            <br />     We are passing in the name of the created stream. In this case **DemoStream**
+- --shard-id **shardId-000000000000** \     <br />     We are passing in the **shardId** of the shard in our stream
+- --shard-iterator-type **TRIM_HORIZON** \  <br />     We are passing in the shard iterater type whicn can be **AT_TIMESTAMP**, **TRIM_HORIZON** or **LASTEST**. In                                                            this project we have used **TRIM_HORIZON** to cause the shardIterator to point to the last untrimmed record in                                                          the shard(Oldest data record in the shard)
 
 
 
