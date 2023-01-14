@@ -87,6 +87,19 @@ aws kinesis **get-shard-iterator**\         <br />     to get an Amazon Kinesis 
 - --shard-id **shardId-000000000000** \     <br />     We are passing in the **shardId** of the shard in our stream
 - --shard-iterator-type **TRIM_HORIZON** \  <br />     We are passing in the shard iterater type whicn can be **AT_TIMESTAMP**, **TRIM_HORIZON** or **LASTEST**. In                                                            this project we have used **TRIM_HORIZON** to cause the shardIterator to point to the last untrimmed record in                                                          the shard(Oldest data record in the shard)
 
+We can use the command below to get the shard iterator
+aws kinesis get-shard-iterator --stream-name DemoStream --shard-id shardId-000000000000 --shard-iterator-type TRIM_HORIZON
+
+
+We can now use the the GetRecords API to get data records from a Kinesis data stream's shard by specifying the shardIterator.
+aws kinesis get-records --shard-iterator\ AAAAAAAAAAE/fk1qZTWLE74jIwqLR/N1OqYDsi9d7KHPhTtk7XIF42kEAJdwg0x0oXlZK/5SC7LciGiW5M3IEHdl/WH4cVYvNO1vvTTNra21WQgOUbgODyGfSeDMhd74BGi7z4l/X0Mi9O98Nexx2uSJx5ZHweKaZzEyRm4wkAYHJ4cmzwV1o2W+h/XBXrjdFB1bAKrj4/fYTGDRwvAVuA79qMoWB9vvq6ZhvYUAOLrQXGEK/sjH9g==
+
+After a succesful **GetRecords** API call, it returns an object containing the **four data records** put in the kinesis data stream and the **next shard iterator**. 
+
+Another alternative to send test data to your **Amazon Kinesis stream** or **Amazon Kinesis Firehose delivery stream** is the **Amazon Kinesis Data Generator**.
+
+I hope to do another tutorial on this in the future.
+
 
 
 
