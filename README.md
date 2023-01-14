@@ -64,6 +64,8 @@ We can use the command below to send a record to the stream.
  - --cli-binary-format  **raw-in-base64-out**\                      A flag that specifies how the binary input paramaters should be interpreted. In this case **raw-in-                                                                     base64-out**
 
  - --data **"{'trans_id': 1, 'trans_type': 'ATM', 'amt': 200}"**    The data blob to be put into the stream. In this case **"{'trans_id': 1, 'trans_type': 'ATM', '                                                                         'amt':200}"**
+
+
 <pre />
 
 
