@@ -66,13 +66,19 @@ We can use the command below to send a record to the stream.
  - --data **"{'trans_id': 1, 'trans_type': 'ATM', 'amt': 200}"**<br />-  The data blob to be put into the stream. In this case **"{'trans_id': 1, 'trans_type': 'ATM' ,                                                                         'amt':200}"**
  
 
-In this example we are using the PutRecord API to put 4 records into the stream one by one. Its also possible to use the PutRecords API to write many records at once   to the stream 
+In this example we are using the PutRecord API to put the following 4 records into the stream one by one. Its also possible to use the PutRecords API to write many records at once into the stream 
  1. aws kinesis put-record --stream-name DemoStream --partition-key 1 --cli-binary-format raw-in-base64-out --data "{"trans_id": 1, "trans_type": "ATM", "amt":   200}"
  2. aws kinesis put-record --stream-name DemoStream --partition-key 1 --cli-binary-format raw-in-base64-out --data "{"trans_id": 2, "trans_type": "ATM", "amt":   400}"
  3. aws kinesis put-record --stream-name DemoStream --partition-key 1 --cli-binary-format raw-in-base64-out --data "{"trans_id": 3, "trans_type": "ATM", "amt":   600}"
  4. aws kinesis put-record --stream-name DemoStream --partition-key 1 --cli-binary-format raw-in-base64-out --data "{"trans_id": 4, "trans_type": "ATM", "amt":   900}"
  
- 
+After a successful PutRecord API operation, we should get a response object containing the ShardID and the Sequence Number
+
+A **Shard** is a uniquely identified group of data records in a Kinesis data stream
+
+The **Sequence Number** is the identifier associated with every record ingested in the stream, and is assigned when a record is put into the stream. Each stream has one or more shards
+
+Next we want to read and identify data records in the stream
 
 
 
