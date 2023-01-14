@@ -57,13 +57,13 @@ We can use the command below to send a record to the stream.
 
  - aws kinesis  **put-record**\        <br />-                            put-record used to put a single record into the stream
 
- - --stream-name  **DemoStream**\                                   We are passing in the name of our created stream. In this case **DemoStream**
+ - --stream-name  **DemoStream**\      <br />-                            We are passing in the name of our created stream. In this case **DemoStream**
 
- - --partition-key  **1**\                                          We are defining a partition key for this put operation
+ - --partition-key  **1**\             <br />-                            We are defining a partition key for this put operation
 
- - --cli-binary-format  **raw-in-base64-out**\                      A flag that specifies how the binary input paramaters should be interpreted. In this case **raw-in-                                                                     base64-out**
+ - --cli-binary-format  **raw-in-base64-out**\       <br />-              A flag that specifies how the binary input paramaters should be interpreted. In this case **raw-in-                                                                     base64-out**
 
- - --data **"{'trans_id': 1, 'trans_type': 'ATM', 'amt': 200}"**    The data blob to be put into the stream. In this case **"{'trans_id': 1, 'trans_type': 'ATM' ,                                                                         'amt':200}"**
+ - --data **"{'trans_id': 1, 'trans_type': 'ATM', 'amt': 200}"**<br />-  The data blob to be put into the stream. In this case **"{'trans_id': 1, 'trans_type': 'ATM' ,                                                                         'amt':200}"**
  
 
 In this example we are using the PutRecord API to put 4 records into the stream one by one. Its also possible to use the PutRecords API to write many records at once   to the stream 
