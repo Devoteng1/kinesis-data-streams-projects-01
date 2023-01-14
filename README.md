@@ -53,6 +53,7 @@ We can use the **PutRecord** to put one record into the stream or **PutRecords**
 We are going to simulate data coming from a BANK ATM whose data has to be streammed into Kinesis Data Streams for further processing. 
 
 We can use the command below to send a record to the stream.
+<pre>
 
  - aws kinesis  **put-record**\                                     put-record used to put a single record into the stream
 
@@ -63,7 +64,7 @@ We can use the command below to send a record to the stream.
  - --cli-binary-format  **raw-in-base64-out**\                      A flag that specifies how the binary input paramaters should be interpreted. In this case **raw-in-                                                                     base64-out**
 
  - --data **"{'trans_id': 1, 'trans_type': 'ATM', 'amt': 200}"**    The data blob to be put into the stream. In this case **"{'trans_id': 1, 'trans_type': 'ATM', '                                                                         'amt':200}"**
-
+<pre />
 
 
 
