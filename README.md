@@ -14,7 +14,9 @@ Some features
 
 Amazon Kinesis Data Streams Capacity Modes
 - Provisioned mode: You can choose the number of shards provisioned, scale manually or using API, send 1MB/S of data to shard and get 2MB/S out of shard
-- On-demand: No need to provision or manage the capacity. Provisioned capacity maximum 200MiB/second write capacity and maximum 400 MiB/second read capacity
+- On-demand mode: No need to provision or manage the capacity. Provisioned capacity maximum 200MiB/second write capacity and maximum 400 MiB/second read capacity
+
+![kinesis flow](k1.PNG)
 
 # Intructions 
 
@@ -24,6 +26,7 @@ Head to the Amazon Kinesis Services dashboard to create a Kinesis Data Stream .
 We have three options : **Kinesis Data Stream** , **Kinesis Data Fireshose** and **Kinesis Data Analytics**
 Select **Kinesis Data Stream** 
 click on **Create data stream**
+![create stream](k2.PNG)
 
 Enter a name for your Kinesis Stream. In this tutirial, we will call our stream **"DemoStream"**
 
