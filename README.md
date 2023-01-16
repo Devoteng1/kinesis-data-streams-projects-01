@@ -26,16 +26,22 @@ Head to the Amazon Kinesis Services dashboard to create a Kinesis Data Stream .
 We have three options : **Kinesis Data Stream** , **Kinesis Data Fireshose** and **Kinesis Data Analytics**
 Select **Kinesis Data Stream** 
 click on **Create data stream**
+
 ![create stream](k2.PNG)
 
 Enter a name for your Kinesis Stream. In this tutirial, we will call our stream **"DemoStream"**
+
 ![stream](k3.PNG)
+
 For the capacity mode : Select **Provisioned mode** 
 Set the number of shards value **1** which can be increased or describe later
 
 Click on **Create Stream** to create the stream. You can wait for just some few seconds to get the stream created
+
 ![create stream](k4.PNG)
+
 ![create data stream](k5.PNG)
+
 Afterwards our stream should be in the **"Active" state**.
 
 # Stage 2 - Create a producer to put records into the Kinesis Data Stream
@@ -46,11 +52,15 @@ You can follow this Documentation [https://docs.aws.amazon.com/cli/v1/userguide/
 
 To confirm AWS CLI has been installed and configure on your computer, you can check the installed version by typing "**aws -version**" which should print the version 
 of AWS CLI installed.
+
 ![view cli version](k7.PNG)
 
 We can view a list of avaialable commands by typing **aws kinesis help**
+
 ![kinesis help](k8.PNG)
+
 Let's check the list of created Kinesis Data Streams in our account by typing  **aws kinesis list-streams**
+
 ![list stream](k9.PNG)
 
 Now lets put some records into the stream. 
@@ -81,6 +91,7 @@ In this example we are using the PutRecord API to put the following 4 records in
  4. aws kinesis put-record --stream-name DemoStream --partition-key 1 --cli-binary-format raw-in-base64-out --data "{"trans_id": 4, "trans_type": "ATM", "amt":   900}"
  
 After a successful PutRecord API operation, we should get a response object containing the ShardID and the Sequence Number
+
 ![successful put stream](k12.PNG)
 
 A **Shard** is a uniquely identified group of data records in a Kinesis data stream
@@ -110,6 +121,8 @@ After a succesful **GetRecords** API call, it returns an object containing the *
 ![four streams data](k17.PNG)
 
 Another alternative to send test data to your **Amazon Kinesis stream** or **Amazon Kinesis Firehose delivery stream** is the **Amazon Kinesis Data Generator**.
+
+![generator](generator.PNG)
 
 I hope to do another tutorial on this in the future.
 
