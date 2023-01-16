@@ -16,6 +16,8 @@ Amazon Kinesis Data Streams Capacity Modes
 - Provisioned mode: You can choose the number of shards provisioned, scale manually or using API, send 1MB/S of data to shard and get 2MB/S out of shard
 - On-demand mode: No need to provision or manage the capacity. Provisioned capacity maximum 200MiB/second write capacity and maximum 400 MiB/second read capacity
 
+![kinesis](kinesis flow.PNG)
+
 # Intructions 
 
 # Stage 1 - Create Amazon Kinesis Application
