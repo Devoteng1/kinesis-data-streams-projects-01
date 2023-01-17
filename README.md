@@ -25,7 +25,7 @@ Amazon Kinesis Data Streams Capacity Modes
 Head to the Amazon Kinesis Services dashboard to create a Kinesis Data Stream . 
 We have three options : **Kinesis Data Stream** , **Kinesis Data Fireshose** and **Kinesis Data Analytics**
 Select **Kinesis Data Stream** 
-click on **Create data stream**
+and then click on **Create data stream**
 
 ![create stream](k2.PNG)
 
