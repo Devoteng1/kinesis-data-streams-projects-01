@@ -34,7 +34,7 @@ Enter a name for your Kinesis Stream. In this tutorial, we will call our stream 
 ![stream](k3.PNG)
 
 For the capacity mode : Select **Provisioned mode** 
-Set the number of shards value to 1, which can be increased or described later.
+ and set the number of shards value to 1, which can be increased or described later.
 
 Click on **Create Stream** to create the stream. You can wait for just some few seconds to get the stream created
 
