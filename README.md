@@ -2,7 +2,7 @@
 
 # Overview
 
-In this project we will be creating a simple Amazon Kinesis application and using the AWS CLI to put records into the stream and read to check records in the streams
+In this project we will be creating an Amazon Kinesis application and use the AWS CLI to put records into the stream and read to check records in the streams
 
 Amazon Kinesis Data Streams is a serverless streaming data service that makes it easy to capture, process, and store data streams at any scale.
 
@@ -34,7 +34,7 @@ Enter a name for your Kinesis Stream. In this tutorial, we will call our stream 
 ![stream](k3.PNG)
 
 For the capacity mode : Select **Provisioned mode** 
- and set the number of shards value to 1, which can be increased or described later.
+and set the number of shards value to 1, which can be increased or decreased later.
 
 Click on **Create Stream** to create the stream. You can wait for just some few seconds to get the stream created
 
@@ -89,7 +89,7 @@ In this example we are using the PutRecord API to put the following 4 records in
  3. aws kinesis put-record --stream-name DemoStream --partition-key 1 --cli-binary-format raw-in-base64-out --data "{"trans_id": 3, "trans_type": "ATM", "amt":   600}"
  4. aws kinesis put-record --stream-name DemoStream --partition-key 1 --cli-binary-format raw-in-base64-out --data "{"trans_id": 4, "trans_type": "ATM", "amt":   900}"
  
-After a successful PutRecord API operation, we should get a response object containing the ShardID and the Sequence Number
+After a successful PutRecord API operation, we should get a response object containing the ShardID and the Sequence Number.
 
 ![successful put stream](k12.PNG)
 
