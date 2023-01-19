@@ -25,16 +25,16 @@ Amazon Kinesis Data Streams Capacity Modes
 Head to the Amazon Kinesis Services dashboard to create a Kinesis Data Stream . 
 We have three options : **Kinesis Data Stream** , **Kinesis Data Fireshose** and **Kinesis Data Analytics**
 Select **Kinesis Data Stream** 
-click on **Create data stream**
+and then click on **Create data stream**
 
 ![create stream](k2.PNG)
 
-Enter a name for your Kinesis Stream. In this tutirial, we will call our stream **"DemoStream"**
+Enter a name for your Kinesis Stream. In this tutorial, we will call our stream **"DemoStream"**
 
 ![stream](k3.PNG)
 
 For the capacity mode : Select **Provisioned mode** 
-Set the number of shards value **1** which can be increased or describe later
+ and set the number of shards value to 1, which can be increased or described later.
 
 Click on **Create Stream** to create the stream. You can wait for just some few seconds to get the stream created
 
@@ -45,13 +45,12 @@ Click on **Create Stream** to create the stream. You can wait for just some few 
 Afterwards our stream should be in the **"Active" state**.
 
 # Stage 2 - Create a producer to put records into the Kinesis Data Stream
-In this tuotorial we are going to use the AWS CLI to communicate with the Amazon Kinesis Service
+In this tutorial we are going to use the AWS CLI to communicate with the Amazon Kinesis Service
 
-This tutorials assume you have already installed and configured AWS CLI.
+This tutorial assume you have already installed and configured AWS CLI.
 You can follow this Documentation [https://docs.aws.amazon.com/cli/v1/userguide/install-windows.html] to install and configure the AWS CLI for your OS. We are using windows 10 for this tutorial. 
 
-To confirm AWS CLI has been installed and configure on your computer, you can check the installed version by typing "**aws -version**" which should print the version 
-of AWS CLI installed.
+To confirm that the AWS CLI has been installed and configured on your computer, you can check the installed version by typing "**aws -version**" which should print the version of the AWS CLI that is installed.
 
 ![view cli version](k7.PNG)
 
